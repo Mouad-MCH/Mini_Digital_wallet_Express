@@ -1,0 +1,35 @@
+{
+  "users": [
+    {
+      "id": 1771432343834,
+      "name": "Adam"
+    },
+    {
+      "id": 1771432361047,
+      "name": "mouad charadi"
+    }
+  ],
+  "wallets": [
+    {
+      "id": 1771432343834,
+      "name": "Adam",
+      "userId": 1771432343834,
+      "sold": 2269
+    },
+    {
+      "id": 1771432361047,
+      "name": "mouad charadi",
+      "userId": 1771432361047,
+      "sold": 2311
+    }
+  ],
+  "operations": [
+    {
+      "id": 1771524196345,
+      "wallet_id": 1771454582185,
+      "type": "deposit",
+      "amount": 234,
+      "date": "2026-02-19T18:03:16.345Z"
+    }
+  ]
+}
