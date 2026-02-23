@@ -4,14 +4,14 @@ import { fileURLToPath } from 'url';
 const filepath = fileURLToPath(new URL('./db.json', import.meta.url));
 
 // GET All data
-const readAllDB = async () => {
+export const readAllDB = async () => {
     let data = await fs.readFile(filepath, 'utf-8')
     return JSON.parse(data)
 }
 
 // save data
 
-const saveDB = async (db) => {
+export const saveDB = async (db) => {
     try {
         await fs.writeFile(filepath, JSON.stringify(db, null, 2))
         return { success: true }
@@ -22,8 +22,16 @@ const saveDB = async (db) => {
 
 // create
 
-const createDB = async (type, data) => {
+export const createDB = async (type, data) => {
     let db = await readAllDB();
+    
+    if(type === "users") {
+        const exist = db[type].find(el => el.name === data.name);
+        if(exist) {
+            return { success: false, message:  `${type.slice(type.length - 2)} alridy exist` }
+        }
+    }
+
 
     try {
         db[type].push(data)
@@ -40,7 +48,7 @@ const createDB = async (type, data) => {
 
 // delete
 
-const deleteDB = async (type, id) => {
+export const deleteDB = async (type, id) => {
     const db = await readAllDB();
     const data = db[type].find(e => e.id === id)
 
@@ -74,7 +82,7 @@ const deleteDB = async (type, id) => {
 
 // update
 
-const update = async (id, body) => {
+export const update = async (id, body) => {
     const db = await readAllDB();
     const user = db.users.find(el => el.id === id);
     const walet = db.wallets.find(el => el.userId === id)
