@@ -1,3 +1,32 @@
 
 ### GET
 GET http://localhost:1010
+
+### CRATE USER
+POST http://localhost:1010/user/register
+Content-Type: application/json
+
+{
+  "name": "test3",
+  "email": "teet3@gmail.com",
+  "phone": "2345"
+}
+
+### get All Users
+GET http://localhost:1010/user
+
+### get user by ID
+GET http://localhost:1010/user/1771432343834
+
+### DELETE user
+DELETE http://localhost:1010/user/1771931221490
+
+### update user
+PUT http://localhost:1010/user/1771432343834
+Content-Type: application/json
+
+{
+  "name": "Adam",
+  "email":"Adam12@gmail.com",
+  "phone": "+212 696343530"
+}

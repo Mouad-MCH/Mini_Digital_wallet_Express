@@ -2,11 +2,27 @@
   "users": [
     {
       "id": 1771432343834,
-      "name": "Adam"
+      "name": "Adam",
+      "email": "Adam12@gmail.com",
+      "phone": "+212 696343530"
     },
     {
       "id": 1771432361047,
-      "name": "mouad charadi"
+      "name": "mouad charadi",
+      "email": "mouad@gmail.com",
+      "phone": "+212 69650440"
+    },
+    {
+      "id": 1771868674440,
+      "name": "charadi",
+      "email": "ddgmain@gmail.com",
+      "phone": "034567"
+    },
+    {
+      "id": 1771868828692,
+      "name": "test2",
+      "email": "teet2@gmail.com",
+      "phone": "064333324O455"
     }
   ],
   "wallets": [
@@ -21,6 +37,24 @@
       "name": "mouad charadi",
       "userId": 1771432361047,
       "sold": 2311
+    },
+    {
+      "id": 1771868828725,
+      "name": "walet_1",
+      "userId": 1771868828692,
+      "solde": 0
+    },
+    {
+      "id": 1771870340398,
+      "name": "walet_1",
+      "userId": 1771870340378,
+      "solde": 0
+    },
+    {
+      "id": 1771931229453,
+      "name": "walet_1",
+      "userId": 1771931229450,
+      "solde": 0
     }
   ],
   "operations": [

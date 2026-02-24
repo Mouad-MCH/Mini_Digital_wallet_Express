@@ -26,9 +26,9 @@ export const createDB = async (type, data) => {
     let db = await readAllDB();
     
     if(type === "users") {
-        const exist = db[type].find(el => el.name === data.name);
+        const exist = db.users.find(el => el.email === data.email);
         if(exist) {
-            return { success: false, message:  `${type.slice(type.length - 2)} alridy exist` }
+            return { success: false, message:  `User alridy exist` }
         }
     }
 
@@ -84,16 +84,12 @@ export const deleteDB = async (type, id) => {
 
 export const update = async (id, body) => {
     const db = await readAllDB();
+    console.log(body)
     const user = db.users.find(el => el.id === id);
-    const walet = db.wallets.find(el => el.userId === id)
-
-    if(!user) {
-        return { success: false, message: 'id not found' }
-    }
-
     try {
         user.name = body.name;
-        walet.name = body.name;
+        user.email = body.email;
+        user.phone = body.phone;
 
         const save = await saveDB(db);
         if(!save.success) {

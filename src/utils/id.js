@@ -1,5 +1,5 @@
 
 
 export const generateId = () => {
-    return new Date();
+    return Date.now();
 }

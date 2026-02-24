@@ -3,6 +3,7 @@ import { generateId } from "../utils/id.js";
 
 
 export const createWallet = async (req, res) => {
+    
     const wallet = {
         id : generateId(),
         name: req.body.name,
@@ -11,7 +12,7 @@ export const createWallet = async (req, res) => {
     }
 
     try {
-        await createDB(db)
+        await createDB("wallets", wallet)
     }catch {
         res.status(500).json({ success: false })
     }
