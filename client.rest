@@ -7,8 +7,8 @@ POST http://localhost:1010/user/register
 Content-Type: application/json
 
 {
-  "name": "test3",
-  "email": "teet3@gmail.com",
+  "name": "ttttttttttt",
+  "email": "tttttt3@gmail.com",
   "phone": "2345"
 }
 
@@ -19,7 +19,7 @@ GET http://localhost:1010/user
 GET http://localhost:1010/user/1771432343834
 
 ### DELETE user
-DELETE http://localhost:1010/user/1771931221490
+DELETE http://localhost:1010/user/1772016751824
 
 ### update user
 PUT http://localhost:1010/user/1771432343834
@@ -29,4 +29,50 @@ Content-Type: application/json
   "name": "Adam",
   "email":"Adam12@gmail.com",
   "phone": "+212 696343530"
+}
+
+
+######### Wallets ##########
+
+##€ GET ALL wallets
+GET http://localhost:1010/wallet/
+
+### GET wallet by Id
+GET http://localhost:1010/wallet/1772014442369
+
+### add new Wallet 
+POST http://localhost:1010/wallet/1772016883172
+Content-Type: application/json
+
+{
+  "name": "wallet_2"
+}
+
+### deposit
+POST http://localhost:1010/wallet/1772014449912/deposit
+Content-Type: application/json
+
+{
+  "amount": 1
+}
+
+### withdraw
+POST http://localhost:1010/wallet/1772014449912/withdraw
+Content-Type: application/json
+
+{
+  "amount": 1.5
+}
+
+
+### DELETE by wallet
+DELETE http://localhost:1010/wallet/1772014449915
+
+
+### Update wallet
+PUT http://localhost:1010/wallet/1772014442377
+Content-Type: application/json
+
+{
+  "name": "w_1",
 }

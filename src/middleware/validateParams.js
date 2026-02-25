@@ -10,5 +10,7 @@ export const validateParams = (req, res, next) => {
     return res.status(400).json({ success: false, message: "ID must be a number" })
   }
 
+  req.params.id = parseInt(req.params.id)
+
   next()
 }

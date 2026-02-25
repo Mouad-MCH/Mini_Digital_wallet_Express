@@ -18,9 +18,12 @@ export const createUser = async (req, res) => {
         name: "walet_1",
     }
 
+    req.params.userId = user.id;
+    req.body = wallet
+
     try {
         const create = await createDB("users", user);
-        createWallet({ body: wallet })
+        createWallet(req)
         if(!create.success) {
           return  res.status(409).json({ success: false, message: create.message })
         }

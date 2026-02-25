@@ -78,8 +78,6 @@ export const deleteDB = async (type, id) => {
 }
 
 
-// console.log(await deleteDB("users", 1771432343834))
-
 // update
 
 export const update = async (id, body) => {
